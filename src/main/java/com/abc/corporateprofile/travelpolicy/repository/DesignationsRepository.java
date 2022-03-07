@@ -15,6 +15,6 @@ public interface DesignationsRepository extends JpaRepository<Designations, Inte
 	@Transactional
 	@Query("UPDATE Designations d SET d.designation_name=:designation_name, d.department_name=:department_name, d.modified_by=:modified_by WHERE d.id=:id")
 	public void updateDesignationById(@Param("id") Integer id, @Param("designation_name") String designation_name,
-			@Param("designation_name") String department_name, @Param("modified_by") Integer modified_by);
+			@Param("department_name") String department_name, @Param("modified_by") Integer modified_by);
 
 }
